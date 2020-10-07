@@ -15,6 +15,7 @@ public class YeetTheCan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //this moves the can forward but needs to use 'Vector3.up' because of how the can is rotated
         transform.Translate(Vector3.up * Time.deltaTime * speed);
     }
 }

@@ -494,7 +494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 10
-  xRange: 10
+  xRange: 16
   projectilePrefab: {fileID: 3036985007445164628, guid: 9884caf2889e7044b98920947c422fde,
     type: 3}
 --- !u!1 &992285705
@@ -636,6 +636,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da9a834709a4e64a9516ef991753aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 1365448465450318395, guid: 5eb5f1a86ee2bea4da5cbb6b956681c3, type: 3}
+  - {fileID: 8639875338898711540, guid: e3d294d0b05fffd49acf4ca9cbbde9b4, type: 3}
+  - {fileID: 3847681373759640935, guid: d33be28f0efbbe8438a4103089f424ab, type: 3}
+  spawnRangeX: 16
+  spawnRangeZ: 20
 --- !u!4 &1896110314
 Transform:
   m_ObjectHideFlags: 0

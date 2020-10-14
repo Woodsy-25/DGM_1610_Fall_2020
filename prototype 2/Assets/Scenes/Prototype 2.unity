@@ -493,7 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalInput: 0
-  speed: 10
+  speed: 15
   xRange: 16
   projectilePrefab: {fileID: 3036985007445164628, guid: 9884caf2889e7044b98920947c422fde,
     type: 3}
@@ -642,6 +642,8 @@ MonoBehaviour:
   - {fileID: 3847681373759640935, guid: d33be28f0efbbe8438a4103089f424ab, type: 3}
   spawnRangeX: 16
   spawnRangeZ: 20
+  startDelay: 2
+  spawnTime: 1.5
 --- !u!4 &1896110314
 Transform:
   m_ObjectHideFlags: 0

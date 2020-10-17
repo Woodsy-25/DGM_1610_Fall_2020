@@ -13,12 +13,14 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // this will spawn the animals in at random times after a delay from start
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnTime);
     }
 
     // Update is called once per frame
     void Update()
     {
+        // allows the player to spawn in animals if wanted
         if(Input.GetKeyDown(KeyCode.S))
         {
             SpawnRandomAnimal();

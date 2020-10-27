@@ -5,19 +5,21 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
 
-    private RigidBody playerRb;
-    public float jumpForce = 500;
+    private Rigidbody playerRb;
+    public float jumpForce = 9;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<RigidBody>();
-        playerRb.AddForce(Vector3 * jumpForce);
+        playerRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 }

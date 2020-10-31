@@ -27,6 +27,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
+    // method that will randomly spawn in animals
     void SpawnRandomAnimal()
     {
         int animalIndex = Random.Range(0, animalPrefabs.Length);

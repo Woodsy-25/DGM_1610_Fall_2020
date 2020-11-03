@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    private float speed = 10;
+    private float speed = 15;
     private PlayerControl playerControlScript;
     private float leftBound = -15;
 
@@ -17,6 +17,7 @@ public class MoveLeft : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // sees if the player has failed to know when to stop moving the background and objects
         if (playerControlScript.gameOver == false)
         {
             transform.Translate(Vector3.left * Time.deltaTime * speed);

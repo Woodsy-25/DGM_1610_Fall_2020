@@ -37,12 +37,14 @@ public class PlayerControllerX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //looks to see if the player is to low to bounce it back up
         if (transform.position.y < botLimit)
         {
             playerRb.AddForce(Vector3.up * floatForce);
             playerAudio.PlayOneShot(bounceSound, 1.0f);
         }
 
+        // looks to see when the player goes to high
         if (transform.position.y > topLimit)
         {
             toHigh = true;

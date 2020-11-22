@@ -16,6 +16,7 @@ public class RotateCam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //rotates the camera around the focal point
         float horzontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, -horzontalInput * rotationSpeed * Time.deltaTime);
     }

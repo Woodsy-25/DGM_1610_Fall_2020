@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 490423605337678315, guid: bae83e23400b602438240fa0a568308d, type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2561133480548733942, guid: bae83e23400b602438240fa0a568308d, type: 3}
       propertyPath: m_Carve
       value: 1
@@ -795,6 +799,10 @@ PrefabInstance:
     - target: {fileID: 2220399455598944530, guid: 60137d55d0923934aaa1f405b6b5e14e, type: 3}
       propertyPath: m_Mass
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220399455598944530, guid: 60137d55d0923934aaa1f405b6b5e14e, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2276540213413354286, guid: 60137d55d0923934aaa1f405b6b5e14e, type: 3}
       propertyPath: m_Name

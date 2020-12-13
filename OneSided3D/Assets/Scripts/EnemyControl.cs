@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyControl : MonoBehaviour
 {
+    private GameManager gameManager;
     public float speed = 10.0f;
     private Rigidbody enemyRb;
     private GameObject player, center;
@@ -14,6 +15,8 @@ public class EnemyControl : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
         player = GameObject.Find("Player");
         center = GameObject.Find("center");
     }
@@ -21,20 +24,23 @@ public class EnemyControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 C2A = -ObjectA.position - transform.position;
-        Vector3 C2B = ObjectB.position - transform.position;
-        Vector3 goTo = new Vector3((C2A.x + C2B.x)/2.0f, (C2A.y + C2B.y)/2.0f, (C2A.z + C2B.z)/2.0f).normalized;
-
-        if (isIt == true)
+        if (gameManager.isGameActive)
         {
-            Vector3 lookDirection = (player.transform.position - transform.position).normalized;
+            Vector3 C2A = -ObjectA.position - transform.position;
+            Vector3 C2B = ObjectB.position - transform.position;
+            Vector3 goTo = new Vector3((C2A.x + C2B.x)/2.0f, (C2A.y + C2B.y)/2.0f, (C2A.z + C2B.z)/2.0f).normalized;
 
-            enemyRb.AddForce(lookDirection * speed);
-        }      
+            if (isIt == true)
+            {
+                Vector3 lookDirection = (player.transform.position - transform.position).normalized;
 
-        else if (isIt == false)
-        {
-            enemyRb.AddForce(goTo * speed);
+                enemyRb.AddForce(lookDirection * speed);
+            }      
+
+            else if (isIt == false)
+            {
+                enemyRb.AddForce(goTo * speed);
+            }
         }
     }
 
@@ -42,10 +48,12 @@ public class EnemyControl : MonoBehaviour
     {
         if (other.CompareTag("Player") && isIt == true)
         {
+            gameManager.It();
             isIt = false;
         }
         else if (other.CompareTag("Player") && isIt == false)
         {
+            gameManager.NotIt();
             isIt = true;
         }
     }

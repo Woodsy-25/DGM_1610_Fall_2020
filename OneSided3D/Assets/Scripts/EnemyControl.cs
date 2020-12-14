@@ -34,12 +34,12 @@ public class EnemyControl : MonoBehaviour
             {
                 Vector3 lookDirection = (player.transform.position - transform.position).normalized;
 
-                enemyRb.AddForce(lookDirection * speed);
+                enemyRb.AddForce(Time.deltaTime * lookDirection * speed);
             }      
 
             else if (isIt == false)
             {
-                enemyRb.AddForce(goTo * speed);
+                enemyRb.AddForce(Time.deltaTime * goTo * speed);
             }
         }
     }
